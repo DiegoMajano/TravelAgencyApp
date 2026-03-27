@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AgencyTravel</string>
+
+    <!-- main -->
+    <string name="btn_add">Agregar destino</string>
+
+<!-- Form Destination -->
+    <string name="hint_country">País destino</string>
+    <string name="hint_price">Precio del paquete ($)</string>
+    <string name="hint_description">Descripción del viaje</string>
+    <string name="btn_select_image">Seleccionar imagen de galería</string>
+    <string name="btn_save">Guardar Destino</string>
+
+    <!-- item destination -->
+    <string name="btn_edit_item">Editar</string>
+    <string name="btn_delete_item">Eliminar</string>
+
+    <string-array name="paises">
+        <item>El Salvador</item>
+        <item>México</item>
+        <item>España</item>
+        <item>Estados Unidos</item>
+        <item>Colombia</item>
+    </string-array>
+</resources>
