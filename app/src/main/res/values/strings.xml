@@ -1,25 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AgencyTravel</string>
+    <string name="app_name">Destinos App</string>
+    <string name="image_content_description">Imagen del destino</string>
+    <string name="error_loading_image">No se pudo cargar la imagen</string>
 
-    <!-- main -->
-    <string name="btn_add">Agregar destino</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="login_email_hint">Correo electrónico</string>
+    <string name="login_password_hint">Contraseña</string>
+    <string name="login_button_text">Ingresar</string>
+    <string name="login_go_to_register">¿No tienes cuenta? Regístrate</string>
 
-<!-- Form Destination -->
-    <string name="hint_country">País destino</string>
-    <string name="hint_price">Precio del paquete ($)</string>
-    <string name="hint_description">Descripción del viaje</string>
-    <string name="btn_select_image">Seleccionar imagen de galería</string>
-    <string name="btn_save">Guardar Destino</string>
+    <string name="register_title">Registro de Usuario</string>
+    <string name="register_email_hint">Ingresa tu correo</string>
+    <string name="register_password_hint">Crea una contraseña</string>
+    <string name="register_button_text">Registrar</string>
+    <string name="register_back_to_login">Volver al inicio de sesión</string>
 
-    <!-- item destination -->
-    <string name="btn_edit_item">Editar</string>
-    <string name="btn_delete_item">Eliminar</string>
+    <string name="main_toolbar_title">Destinos</string>
+    <string name="main_button_add">Agregar Nuevo</string>
+    <string name="main_empty_list">No hay destinos guardados</string>
 
-    <string-array name="paises">
-        <item>El Salvador</item>
-        <item>México</item>
-        <item>España</item>
-        <item>Estados Unidos</item>
+    <string name="form_title_add">Nuevo Destino</string>
+    <string name="form_title_edit">Editar Destino</string>
+    <string name="form_hint_name">Nombre del lugar</string>
+    <string name="form_hint_country">Selecciona un país</string>
+    <string name="form_text_destination">Nombre del destino</string>
+    <string name="form_hint_price">Precio estimado (USD)</string>
+    <string name="form_hint_description">Escribe una descripción...</string>
+    <string name="form_button_select_image">Seleccionar Imagen</string>
+    <string name="form_button_save">Guardar Cambios</string>
+
+    <string name="item_label_price">Precio: $</string>
+    <string name="item_button_edit">Editar</string>
+    <string name="item_button_delete">Eliminar</string>
+    <string name="item_delete_confirmation">¿Estás seguro de eliminar este destino?</string>
+
+    <string-array name="countries_array">
+        <item>Seleccione un país</item>
+        <item>Argentina</item>
+        <item>Brasil</item>
+        <item>Bolivia</item>
+        <item>Chile</item>
         <item>Colombia</item>
+        <item>Costa Rica</item>
+        <item>Ecuador</item>
+        <item>El Salvador</item>
+        <item>Estados Unidos</item>
+        <item>España</item>
+        <item>Francia</item>
+        <item>Guatemala</item>
+        <item>Grecia</item>
+        <item>Honduras</item>
+        <item>Italia</item>
+        <item>Japón</item>
+        <item>México</item>
+        <item>Nicaragua</item>
+        <item>Panamá</item>
+        <item>Paraguay</item>
+        <item>Perú</item>
+        <item>Uruguay</item>
+        <item>Venezuela</item>
     </string-array>
 </resources>
