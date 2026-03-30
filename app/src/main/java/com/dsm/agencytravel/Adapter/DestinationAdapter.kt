@@ -9,14 +9,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dsm.agencytravel.model.Destination
 
-class DestinationAdapter(private val list: List<Destination>) :
-    RecyclerView.Adapter<DestinationAdapter.ViewHolder>() {
+class DestinationAdapter(
+    private val list: List<Destination>,
+    private val onEdit: (Destination) -> Unit,
+    private val onDelete: (Destination) -> Unit
+) : RecyclerView.Adapter<DestinationAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.txtName)
         val price: TextView = view.findViewById(R.id.txtPrice)
         val description: TextView = view.findViewById(R.id.txtDescription)
         val image: ImageView = view.findViewById(R.id.imgDestination)
+
+        val btnEdit: View = view.findViewById(R.id.btnEdit)
+        val btnDelete: View = view.findViewById(R.id.btnDelete)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -37,5 +43,13 @@ class DestinationAdapter(private val list: List<Destination>) :
         Glide.with(holder.itemView.context)
             .load(destination.imageUrl)
             .into(holder.image)
+
+        holder.btnEdit.setOnClickListener {
+            onEdit(destination)
+        }
+
+        holder.btnDelete.setOnClickListener {
+            onDelete(destination)
+        }
     }
 }

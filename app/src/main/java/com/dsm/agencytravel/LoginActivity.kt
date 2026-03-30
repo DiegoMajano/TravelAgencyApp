@@ -5,9 +5,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.dsm.agencytravel.firebase.FirebaseService
 import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
+
+    private val firebase = FirebaseService()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,16 +22,24 @@ class LoginActivity : AppCompatActivity() {
         val btnRegister = findViewById<Button>(R.id.btnRegister)
 
         btnLogin.setOnClickListener {
-            val email = etEmail.text.toString()
-            val pass = etPassword.text.toString()
+
+            val email = etEmail.text.toString().trim()
+            val pass = etPassword.text.toString().trim()
 
             if (email.isEmpty() || pass.isEmpty()) {
-                Toast.makeText(this, "Campos vacíos", Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this, "Login correcto (simulado)", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-                startActivity(Intent(this, MainActivity::class.java))
-                finish()
+            firebase.login(email, pass) { success, error ->
+                if (success) {
+                    Toast.makeText(this, "Bienvenido", Toast.LENGTH_SHORT).show()
+
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
+                } else {
+                    Toast.makeText(this, error ?: "Error desconocido", Toast.LENGTH_LONG).show()
+                }
             }
         }
 
