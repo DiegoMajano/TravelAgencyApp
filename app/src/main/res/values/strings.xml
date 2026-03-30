@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Destinos App</string>
+    <string name="app_name">MundeApp</string>
     <string name="image_content_description">Imagen del destino</string>
     <string name="error_loading_image">No se pudo cargar la imagen</string>
 
@@ -10,7 +10,7 @@
     <string name="login_button_text">Ingresar</string>
     <string name="login_go_to_register">¿No tienes cuenta? Regístrate</string>
 
-    <string name="register_title">Registro de Usuario</string>
+    <string name="register_title">Registrarse</string>
     <string name="register_email_hint">Ingresa tu correo</string>
     <string name="register_password_hint">Crea una contraseña</string>
     <string name="register_button_text">Registrar</string>
