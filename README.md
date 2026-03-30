@@ -55,12 +55,8 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 >
 > **Carnet:** RM220481  
 > **Materia:** Desarrollo de Software para Móviles (DSM)
-
+> Documentación por Mintlify</b> - [Documentación Mintlify](https://www.mintlify.com/DiegoMajano/TravelAgencyApp/introduction)
 ---
 <p align="center">
   <b>MundeApp 2026</b> - Desafío Práctico #2
-</p>
-
-<p align="center">
-  <b>Documentación por Mintlify</b> - [Documentación Mintlify](https://www.mintlify.com/DiegoMajano/TravelAgencyApp/introduction)
 </p>
