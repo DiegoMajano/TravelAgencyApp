@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -45,6 +46,7 @@
         <com.google.android.material.textfield.TextInputLayout
             style="?attr/textInputStyle"
             android:layout_marginTop="16dp"
+            app:endIconMode="password_toggle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -56,13 +58,38 @@
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            style="?attr/textInputStyle"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            app:endIconMode="password_toggle"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
+                android:hint="@string/register_confirm_password_hint"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/btnRegistrar"
+            android:id="@+id/btnFormRegister"
             style="@style/ButtonPrimary"
             android:text="@string/register_button_text"
             android:layout_marginTop="32dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_have_account"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"/>
 
     </LinearLayout>
 </ScrollView>
