@@ -37,7 +37,7 @@ class DestinationAdapter(
         val destination = list[position]
 
         holder.name.text = destination.name
-        holder.price.text = "$${destination.price}"
+        holder.price.text = String.format("$%.2f", destination.price)
         holder.description.text = destination.description
 
         Glide.with(holder.itemView.context)

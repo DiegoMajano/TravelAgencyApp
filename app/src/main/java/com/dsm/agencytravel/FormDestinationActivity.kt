@@ -30,7 +30,7 @@ class FormDestinationActivity : AppCompatActivity() {
 
         destinationEdit = intent.getSerializableExtra("destino") as? Destination
 
-        val countries = resources.getStringArray(R.array.paises)
+        val countries = resources.getStringArray(R.array.countries_array)
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, countries)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinner.adapter = adapter
@@ -98,6 +98,9 @@ class FormDestinationActivity : AppCompatActivity() {
                     imageUrl = ""
                 )
 
+                Toast.makeText(this, "Guardando...", Toast.LENGTH_SHORT).show()
+                btnSave.isEnabled = false
+
                 firebase.saveDestination(destination, imageUri!!) { success ->
                     if (success) {
                         Toast.makeText(this, "Destino guardado", Toast.LENGTH_SHORT).show()
@@ -105,6 +108,7 @@ class FormDestinationActivity : AppCompatActivity() {
                     } else {
                         Toast.makeText(this, "Error al guardar", Toast.LENGTH_SHORT).show()
                     }
+                    btnSave.isEnabled = true
                 }
 
             } else {
@@ -115,10 +119,14 @@ class FormDestinationActivity : AppCompatActivity() {
                     description = description
                 )
 
+                Toast.makeText(this, "Actualizando...", Toast.LENGTH_SHORT).show()
+                btnSave.isEnabled = false
+
                 if (imageUri != null) {
                     firebase.updateDestinations(updated, imageUri!!) { success ->
                         if (success) {
                             Toast.makeText(this, "Destino actualizado", Toast.LENGTH_SHORT).show()
+                            btnSave.isEnabled = true
                             finish()
                         }
                     }
@@ -126,6 +134,7 @@ class FormDestinationActivity : AppCompatActivity() {
                     firebase.updateDestinationWithoutImage(updated) { success ->
                         if (success) {
                             Toast.makeText(this, "Destino actualizado", Toast.LENGTH_SHORT).show()
+                            btnSave.isEnabled = true
                             finish()
                         }
                     }

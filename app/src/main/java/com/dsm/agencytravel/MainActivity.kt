@@ -12,11 +12,12 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dsm.agencytravel.firebase.FirebaseService
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var recycler: RecyclerView
-    private lateinit var btnAdd: Button
+    private lateinit var btnAdd: FloatingActionButton
 
     private val firebase = FirebaseService()
 
@@ -44,7 +45,6 @@ class MainActivity : AppCompatActivity() {
 
         val user = firebase.getCurrentUser()
 
-        // ✅ aquí sí va al login si NO hay sesión
         if (user == null) {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
