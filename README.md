@@ -1,6 +1,6 @@
 # MundeApp - Agency Travel
 
-**MundeApp** es una aplicación de Android desarrollada en **Kotlin** diseñada para gestionar destinos turísticos de una agencia de viajes. La aplicación permite a los usuarios autenticarse y realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) completas, integrando almacenamiento de datos e imágenes en la nube.
+**MundeApp** es una aplicación de Android desarrollada en **Kotlin** diseñada para gestionar destinos turísticos de una agencia de viajes. La aplicación permite a los usuarios autenticarse y realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) completas, integrando almacenamiento de datos e imágenes en la nube. El apk se ha subido al Drive anexado a la entrega, pesa mas de 25MB y Github no lo sube.
 
 ## Características
 
